@@ -24,68 +24,69 @@
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#authors" class="nav-link">Meet the Authors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-            </div> -->
         </div>
 
     </nav>
     <div class="wrapper">
-        <div class=" container">
-            <div class="row">
-                <div class="col-md-2">
-                    <aside class="filters">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Filter Search</div>
-                            <div class="panel-body">
-                                <form>
-                                    <div class="form-group">
-                                        <ul class="list-group" id="filters">
-                                            <li class="filter list-group-item">
-                                                <label for="date">Enter a Date</label>
-                                                <input class="form-control" id="datetime" type="text"
-                                                    placeholder="1/11/2011">
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
-                                </form>
+        <div class="dark-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <aside class="filters">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Filter Search</div>
+                                <div class="panel-body">
+                                    <form>
+                                        <div class="form-group text-dark">
+                                            <ul class="list-group" id="filters">
+                                                <li class="filter list-group-item">
+                                                    <label for="date">Enter a Date</label>
+                                                    <input class="form-control" id="datetime" type="text"
+                                                        placeholder="1/11/2011">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <button id="filter-btn" type="button" class="btn btn-default text-center">Filter
+                                            Table</button>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-md-10">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Date/Time</th>
-                                <th>City</th>
-                                <th>State</th>
-                                <th>Country</th>
-                                <th>Shape</th>
-                                <th>Duration(minutes)</th>
-                                <th>Comments</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
+                        </aside>
+                    </div>
+                    <div class="col-md-10">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Date/Time</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Country</th>
+                                    <th>Shape</th>
+                                    <th>Duration(minutes)</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="py-3 text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 ml-auto">
+                    <p class="lead">
+                        Copyright &copy; <span id="year"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -98,7 +99,12 @@
 
 </body>
 
+<script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+</script>
+
 <script src="static/js/data.js"></script>
-<script src="static/js/reportingTable.js"></script> -->
+<script src="static/js/reportingTable.js"></script>
 
 </html>
